@@ -3,8 +3,7 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
--Make simple calculations.
--Read a random math-related quote.
+-Read and store different books.
 
 ## Built With
 - Major Languages: JAVASCRIPT, HTML, CSS
