@@ -15,11 +15,10 @@
   margin: auto 0 auto 40px;
 }
 
-.book-button {
-  height: 70px;
+.status {
+  height: 50px;
   width: 20%;
   margin: auto 30px auto 0;
-  border-radius: 50px;
 }
 
 .section {
@@ -51,6 +50,8 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  background-color: #fafafa;
+  border: #fafafa;
 }
 
 .edit {
