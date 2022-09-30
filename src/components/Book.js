@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Book.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { remove } from '../redux/books/books';
+import { deleteBookApi, displayBooks } from '../redux/books/books';
 
 const Book = () => {
   const books = useSelector((state) => state.book);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(displayBooks());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       {books.map((book) => (
         <React.Fragment key={book.id}>
           <div className="book">
             <div className="book-holder">
-              <span className="School-of">
-                Action
-              </span>
               <h2>
                 {book.title}
               </h2>
@@ -23,7 +25,7 @@ const Book = () => {
                 <span className="Comments">
                   Comments
                 </span>
-                <button className="delete" type="button" onClick={() => dispatch(remove(book.id))}>
+                <button className="delete" type="button" onClick={() => dispatch(deleteBookApi(book.id))}>
                   Delete
                 </button>
                 <span className="edit">
@@ -31,8 +33,6 @@ const Book = () => {
                 </span>
               </div>
             </div>
-
-            <div className="Line-2" />
             <div>
               <h2 className="Current-Chapter">
 
