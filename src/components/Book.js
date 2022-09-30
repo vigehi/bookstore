@@ -14,7 +14,7 @@ const Book = () => {
   return (
     <>
       {books.map((book) => (
-        <React.Fragment key={book.item_id}>
+        <React.Fragment key={book.id}>
           <div className="book">
             <div className="book-holder">
               <h2>
@@ -25,7 +25,7 @@ const Book = () => {
                 <span className="Comments">
                   Comments
                 </span>
-                <button className="delete" type="button" onClick={() => dispatch(deleteBookApi(book.item_id))}>
+                <button className="delete" type="button" onClick={() => dispatch(deleteBookApi(book.id))}>
                   Delete
                 </button>
                 <span className="edit">
