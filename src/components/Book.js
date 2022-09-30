@@ -33,8 +33,6 @@ const Book = () => {
                 </span>
               </div>
             </div>
-
-            <div className="Line-2" />
             <div>
               <h2 className="Current-Chapter">
 
